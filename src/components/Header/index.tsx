@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from 'next/link';
+import Modal from '../Modal'
+import { Fragment } from "react";
 
 export function Header() {
   return (
+    <Fragment>
     <header className="bg-header w-full h-[212px]">
       <div className="mx-auto max-w-[1120px] flex justify-between pt-8">
         <Image className="max-h-10" src="/images/logo.png" alt="Logo" width={172} height={40} />
@@ -11,6 +14,10 @@ export function Header() {
         </Link>
       </div>
     </header>
+    <Modal></Modal>
+    </Fragment>
+  
   );
+  
 }
 
